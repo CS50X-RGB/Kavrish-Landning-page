@@ -10,7 +10,7 @@ export default function GrowthAndCalendar() {
   const [today, setToday] = useState(currentDate);
   return (
     <>
-      <div className="flex flex-row bg-[#262626] rounded-xl shadow-xl shadow-black">
+      <div className="flex flex-col md:flex-row bg-[#262626] rounded-xl shadow-xl shadow-black">
         <div className="flex flex-col p-4">
           <h1 className="font-Popins font-bold text-white text-4xl p-8">
             Growth

@@ -41,7 +41,7 @@ export default function Name(){
                     </div>
                 </div>
                 </div>
-                <div className="relative drop-shadow-2xl brightness-100 left-[4rem] md:left-[1rem]">
+                <div className="relative drop-shadow-2xl brightness-100 left-[0rem] md:left-[1rem]">
                 <div className="bg-gradient-to-t from-green-300 via-green-500 to-blue-300  shadow-2xl bg-blend-darken mix-blend-normal drop-shadow-2xl brightness-110 blur w-[10rem] h-[10rem] shadow-bottom-right rounded-bl-full rounded-t-xl"></div>  
          </div>
             </div>

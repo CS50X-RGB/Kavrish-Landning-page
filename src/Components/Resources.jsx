@@ -106,7 +106,7 @@ export default function Rescouces() {
           <h1 className="text-4xl font-bold text-white flex justify-start">
             Managers
           </h1>
-          <div className="flex bg-[#262626] justify-around p-4 rounded-xl flex-row m-4 gap-4 ">
+          <div className="flex flex-row bg-[#262626] justify-around p-4 rounded-xl m-4 gap-4 ">
           <button className="text-white bg-green-400 rounded-full h-4 w-4 flex items-center justify-center p-3" onClick={prevCards}>1</button>
           {cards.slice(currentIndex, currentIndex + 2).map((card, index) => (
         <Card
