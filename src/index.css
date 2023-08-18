@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shadow-top-left {
+    box-shadow: -20px -18px 10px rgba(76, 185, 111, 0.96);
+    filter: brightness(3) blur(40);
+    /* border-radius: 9rem 3rem 3rem; */
+}
+.shadow-bottom-right {
+    box-shadow: 24px 18px -10px rgba(76, 185, 111, 0.96);
+}
+body{
+    background: black;
+}
