@@ -24,9 +24,9 @@ function Card(props) {
     return (
     <div className="flex flex-col bg-[#2B2B2B] rounded-xl text-lg font-bold w-1/3 py-3 font-Popins text-white justify-center items-center">
       <img src={props.img} alt="manager" className="" />
-      <div className="flex flex-col p-5 gap-1">
-      <h1>Name : {props.name}</h1>
-      <p className="text-md">Category :    {props.category}</p>
+      <div className="flex flex-col p-2 md:p-5 gap-1">
+      <h1 className="text-md">Name : {props.name}</h1>
+      <p className="text-sm md:text-md">Category :    {props.category}</p>
       <p className="text-sm">Specialization : {props.special}</p>
       </div>
       <button className="text-black w-full py-2 mx-2 px-4 bg-[#66E550] rounded-lg">
@@ -102,11 +102,11 @@ export default function Rescouces() {
           />
         </div>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex  flex-col gap-4">
           <h1 className="text-4xl font-bold text-white flex justify-start">
             Managers
           </h1>
-          <div className="flex flex-row bg-[#262626] justify-around p-4 rounded-xl m-4 gap-4 ">
+          <div className="flex flex-row bg-[#262626] justify-around p-2 rounded-xl m-4 gap-4 ">
           <button className="text-white bg-green-400 rounded-full h-4 w-4 flex items-center justify-center p-3" onClick={prevCards}>1</button>
           {cards.slice(currentIndex, currentIndex + 2).map((card, index) => (
         <Card
