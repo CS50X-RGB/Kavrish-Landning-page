@@ -3,6 +3,8 @@ import note from "../assets/note.svg";
 import debates from "../assets/debates.svg";
 import manager1 from "../assets/manager1.svg";
 import manager2 from "../assets/manager2.svg";
+import manager3 from '../assets/manager3.svg';
+import { useState } from "react";
 
 function Rescouces1(props) {
   return (
@@ -19,7 +21,7 @@ function Rescouces1(props) {
 }
 
 function Card(props) {
-  return (
+    return (
     <div className="flex flex-col bg-[#2B2B2B] rounded-xl text-lg font-bold w-1/3 py-3 font-Popins text-white justify-center items-center">
       <img src={props.img} alt="manager" className="" />
       <div className="flex flex-col p-5 gap-1">
@@ -35,6 +37,45 @@ function Card(props) {
 }
 
 export default function Rescouces() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const cards = [
+    {
+      img: manager1,
+      name: "Rohan",
+      category: "Marketing",
+      special: "Social Media Marketing"
+    },
+    {
+      img: manager2,
+      name: "Riya",
+      category: "Design",
+      special: "Brand Designing"
+    },
+    {
+      img: manager1,
+      name: "John",
+      category: " Design",
+      special: "Brand Designer"
+    },
+    {
+      img: manager1,
+      name: "Rohan",
+      category: "Marketing",
+      special: "Social Media Marketing"
+    }, // Add more card objects as needed
+  ];
+  const nextCards = () => {
+    const newIndex = currentIndex + 2;
+    if (newIndex < cards.length) {
+      setCurrentIndex(newIndex);
+    }
+  };
+  const prevCards = () => {
+    const newIndex = currentIndex - 2;
+    if (newIndex >= 0) {
+      setCurrentIndex(newIndex);
+    }
+  };
   return (
     <>
       <div className="flex flex-col md:flex-row items-normal md:items-center justify-center bg-[#181818] rounded-xl p-4 gap-3 font-Popins">
@@ -66,21 +107,17 @@ export default function Rescouces() {
             Managers
           </h1>
           <div className="flex bg-[#262626] justify-around p-4 rounded-xl flex-row m-4 gap-4 ">
-          <Card 
-          img={manager1}
-          name="Rohan"
-          category="Marketing"
-          special="Social Media Marketing"/>
-            <Card 
-            img={manager2}
-            name="Riya"
-            category="Design"
-            special="Brand Designing"/>
-           
-           
-           
-           
-           
+          <button className="text-white bg-green-400 rounded-full h-4 w-4 flex items-center justify-center p-3" onClick={prevCards}>1</button>
+          {cards.slice(currentIndex, currentIndex + 2).map((card, index) => (
+        <Card
+          key={index}
+          img={card.img}
+          name={card.name}
+          category={card.category}
+          special={card.special}
+        />
+      ))}
+      <button className="text-white bg-green-400 rounded-full h-4 w-4 flex items-center justify-center p-3" onClick={nextCards}> 2 </button>
             </div>
         </div>
       </div>
