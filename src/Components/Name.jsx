@@ -6,11 +6,10 @@ export default function Name(){
         <>
         <div className="flex flex-col gap-4">
         <div className="shadow-xl flex flex-row  justify-between p-8 shadow-black rounded-xl bg-[#262626]">
-            {/* Container div */}
-            <div className="flex flex-col gap-9 font-bold justify-between text-white font-Popins">
+            <div className="flex flex-col gap-9 font-bold text-white font-Popins">
                 <div className="pr-4">
-                <h1 className="text-5xl">Hi! John</h1>
-                <p className="text-xl">How're you doin'?</p>
+                <h1 className="text-3xl md:text-5xl">Hi! John</h1>
+                <p className="text-md md:text-xl">How're you doin'?</p>
                 </div>
                 <div>
                     <p className="text-md">We have new </p>
@@ -42,8 +41,8 @@ export default function Name(){
                     </div>
                 </div>
                 </div>
-                <div className="relative drop-shadow-2xl brightness-100">
-         <div className="bg-gradient-to-t from-green-300 via-green-500 to-blue-300  shadow-2xl bg-blend-darken mix-blend-normal drop-shadow-2xl brightness-110 blur w-[10rem] h-[10rem] shadow-bottom-right rounded-bl-full rounded-t-xl"></div>  
+                <div className="relative drop-shadow-2xl brightness-100 left-[4rem] md:left-[1rem]">
+                <div className="bg-gradient-to-t from-green-300 via-green-500 to-blue-300  shadow-2xl bg-blend-darken mix-blend-normal drop-shadow-2xl brightness-110 blur w-[10rem] h-[10rem] shadow-bottom-right rounded-bl-full rounded-t-xl"></div>  
          </div>
             </div>
         </div>

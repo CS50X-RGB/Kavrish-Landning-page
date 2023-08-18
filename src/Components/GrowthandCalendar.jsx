@@ -113,17 +113,30 @@ export default function GrowthAndCalendar() {
           </div>
           <div className="w-96 h-96 shadow-xl text-white font-Popins">
             <h1 className="text-center text-black rounded-xl font-bold bg-green-400 flex justify-center">
-            {Months[today.month()]}, {today.year()}
+              {Months[today.month()]}, {today.year()}
             </h1>
             <div className="flex items-center gap-4">
-            <GrFormPreviousLink  className="w-5 h-5 cursor-pointer" onClick={()=>setToday(today.month(today.month() - 1))}/>
-            <h1 className="cursor-pointer" onClick={() =>setToday(currentDate)}>Today</h1>
-            <GrFormNextLink className="w-5 h-5 cursor-pointer" onClick={()=>setToday(today.month(today.month() + 1))}/>
+              <GrFormPreviousLink
+                className="w-5 h-5 cursor-pointer"
+                size={23}
+                style={{ fill: "white" }}
+                onClick={() => setToday(today.month(today.month() - 1))}
+              />
+              <h1
+                className="cursor-pointer"
+                onClick={() => setToday(currentDate)}
+              >
+                Today
+              </h1>
+              <GrFormNextLink
+                className="w-5 h-5 cursor-pointer"
+                onClick={() => setToday(today.month(today.month() + 1))}
+              />
             </div>
             <div className="w-full pt-5 grid grid-cols-7">
-            {days.map((day, index) => {
+              {days.map((day, index) => {
                 return (
-                <h1
+                  <h1
                     className="h-7 grid place-content-center text-sm"
                     key={index}
                   >
@@ -133,22 +146,24 @@ export default function GrowthAndCalendar() {
               })}
             </div>
             <div className="w-full grid grid-cols-7">
-              {generateDate(today.month(),today.year()).map(({ date, currentMonth, today }) => (
-                <div
-                  key={date.toString()}
-                  className="h-12 grid place-content-center"
-                >
-                  <h1
-                    className={cn(
-                      currentMonth ? "" : "text-green-300 bg-white",
-                      today ? "bg-green-800 font-bold" : "",
-                      "h-10 w-10 grid place-content-center rounded-full hover:bg-green-500 hover:text-black transition-all"
-                    )}
+              {generateDate(today.month(), today.year()).map(
+                ({ date, currentMonth, today }) => (
+                  <div
+                    key={date.toString()}
+                    className="h-12 grid place-content-center"
                   >
-                    {date.date()}
-                  </h1>
-                </div>
-              ))}
+                    <h1
+                      className={cn(
+                        currentMonth ? "" : "text-green-300 bg-white",
+                        today ? "bg-green-800 font-bold" : "",
+                        "h-10 w-10 grid place-content-center rounded-full hover:bg-green-500 hover:text-black transition-all"
+                      )}
+                    >
+                      {date.date()}
+                    </h1>
+                  </div>
+                )
+              )}
             </div>
           </div>
         </div>

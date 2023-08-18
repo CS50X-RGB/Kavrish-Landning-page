@@ -13,10 +13,10 @@ function SideBar(){
     // const [active ,setActive] = useState();
     return (
         <>
-        <div className="flex flex-col h-full  p-5 bg-[#181818] shadow-xl shadow-black items-center justify-around  gap-16 rounded-xl">
+        <div className="flex flex-col min-h-screen p-5 bg-[#181818] shadow-xl shadow-black items-center justify-around gap-16 rounded-xl">
         <img src={logo} alt='logo' className='w-16'/>
         <div className='flex flex-col gap-[5rem]'>
-        <BsMenuButtonWideFill className='fill-white' size={45}/>
+        <BsMenuButtonWideFill className='fill-white focus:fill-green-300' size={45}/>
         <BsFillPeopleFill className='fill-white' size={45} />
         <PiTelevisionSimpleFill className='fill-white' size={45} />
         <img  src={icon} alt='icon' />

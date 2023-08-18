@@ -38,7 +38,7 @@ export default function Rescouces() {
   return (
     <>
       <div className="flex flex-col md:flex-row items-normal md:items-center justify-center bg-[#181818] rounded-xl p-4 gap-3 font-Popins">
-        <div className="flex flex-col gap-4 w-[40%]">
+        <div className="flex flex-col gap-4 w-[100%] md:w-[40%] ">
           <h1 className="text-4xl font-bold text-white flex justify-start">
             Resources
           </h1>
@@ -51,6 +51,7 @@ export default function Rescouces() {
           <Rescouces1
             img={note}
             text="Roadmaps"
+            className="w-full"
             para="Get a best roadmaps for your career"
           />
           <Rescouces1
@@ -75,11 +76,11 @@ export default function Rescouces() {
             name="Riya"
             category="Design"
             special="Brand Designing"/>
-            <Card 
-                img={manager1}
-                name="Rohan"
-                category="Marketing"
-                special="Social Media Marketing"/>
+           
+           
+           
+           
+           
             </div>
         </div>
       </div>
