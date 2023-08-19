@@ -22,7 +22,7 @@ function Rescouces1(props) {
 
 function Card(props) {
     return (
-    <div className="flex flex-col bg-[#2B2B2B] rounded-xl text-lg font-bold w-1/3 py-3 font-Popins text-white justify-center items-center">
+    <div className="flex flex-col bg-[#2B2B2B] rounded-xl text-lg font-bold w-1/2 md:w-1/3 py-3 font-Popins text-white justify-center items-center">
       <img src={props.img} alt="manager" className="" />
       <div className="flex flex-col p-2 md:p-5 gap-1">
       <h1 className="text-md">Name : {props.name}</h1>
@@ -80,7 +80,7 @@ export default function Rescouces() {
     <>
       <div className="flex flex-col md:flex-row items-normal md:items-center justify-center bg-[#181818] rounded-xl p-4 gap-3 font-Popins">
         <div className="flex flex-col gap-4 w-[100%] md:w-[40%] ">
-          <h1 className="text-4xl font-bold text-white flex justify-start">
+          <h1 className="text-2xl md:text-4xl font-bold text-white flex justify-start">
             Resources
           </h1>
           <div className="flex flex-col bg-[#262626] gap-4 items-center rounded-xl p-3">
@@ -103,10 +103,10 @@ export default function Rescouces() {
         </div>
         </div>
         <div className="flex  flex-col gap-4">
-          <h1 className="text-4xl font-bold text-white flex justify-start">
+          <h1 className="text-2xl md:text-4xl font-bold text-white flex justify-start">
             Managers
           </h1>
-          <div className="flex flex-row bg-[#262626] justify-around p-2 rounded-xl m-4 gap-4 ">
+          <div className="flex flex-row bg-[#262626] justify-around p-2 rounded-xl  gap-4 ">
           <button className="text-white bg-green-400 rounded-full h-4 w-4 flex items-center justify-center p-3" onClick={prevCards}>1</button>
           {cards.slice(currentIndex, currentIndex + 2).map((card, index) => (
         <Card

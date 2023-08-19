@@ -11,8 +11,8 @@ export default function GrowthAndCalendar() {
   return (
     <>
       <div className="flex flex-col md:flex-row bg-[#262626] rounded-xl shadow-xl shadow-black">
-        <div className="flex flex-col p-4">
-          <h1 className="font-Popins font-bold text-white text-4xl p-8">
+        <div className="flex flex-col p-2 md:p-4">
+          <h1 className="font-Popins font-bold text-white text-2xl p-2 md:text-4xl md:p-8">
             Growth
           </h1>
           <div className="bg-[#2B2B2B] shadow-lg shadow-black rounded-xl m-[1rem] flex flex-row">
@@ -69,7 +69,7 @@ export default function GrowthAndCalendar() {
         </div>
         <div className="flex flex-col p-4">
           <div className="flex flex-row justify-between gap-7">
-            <h1 className="text-white p-8 text-4xl font-Popins font-bold">
+            <h1 className="text-white p-2 md:p-8 text-2xl md:text-4xl font-Popins font-bold">
               Calendar
             </h1>
             <div className="flex flex-row justify-end">
@@ -111,11 +111,11 @@ export default function GrowthAndCalendar() {
               </div>
             </div>
           </div>
-          <div className="w-96 h-96 shadow-xl text-white font-Popins">
+          <div className="w-[90%] md:w-96 h-96 shadow-xl text-white font-Popins">
             <h1 className="text-center text-black rounded-xl font-bold bg-green-400 flex justify-center">
               {Months[today.month()]}, {today.year()}
             </h1>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center justify-center gap-4">
               <GrFormPreviousLink
                 className="w-5 h-5 cursor-pointer"
                 size={23}

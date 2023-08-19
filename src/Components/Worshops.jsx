@@ -1,15 +1,18 @@
 import Project1 from '../assets/project1.png';
 import Project2 from '../assets/project2.png';
 
+
+/*Div uske photo ghante wale ko ek div mai flex row ko flex col */
+
 export default function Workshops(){
     return(
         <>
         <div className="flex flex-col font-Popins rounded-xl p-[1rem]  bg-[#181818]">
             <h1 className='text-white text-3xl pb-4 font-bold flex justify-start'>Workshops</h1>
             <div className='flex flex-col gap-4'>
-            <div className="flex flex-row gap-5 justify-center md:justify-start  bg-[#262626] rounded-xl">
+            <div className="flex flex-col md:flex-row gap-5   bg-[#262626] rounded-xl">
+         <img src={Project1} className='rounded-xl' alt='project1'/>
            <div className="flex flex-row p-3">
-           <img src={Project1} className='rounded-xl' alt='project1'/>
                     <div className='flex flex-col px-6'>
                         <h1 className='text-2xl font-bold text-white'>Marketing Workshop</h1>
                         <p className='text-white p-1'>Guest: Roota Mittal</p>
@@ -39,9 +42,9 @@ export default function Workshops(){
             
                 </div>
             </div>
-            <div className="flex flec-wrap flex-col gap-5  bg-[#262626] rounded-xl">
+            <div className="flex flex-col md:flex-row gap-5  bg-[#262626] rounded-xl">
+            <img src={Project2} className='rounded-xl' alt='project2'/>
                 <div className="flex flex-row p-3">
-                <img src={Project2} className='rounded-xl' alt='project2'/>
                 <div className='flex flex-col px-6'>
                     <h1 className='text-2xl font-bold text-white'>Designing Workshop</h1>
                     <p className='text-white p-1'>Guest:Shantanu</p>
